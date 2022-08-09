@@ -14,19 +14,49 @@ const questions = [
     name: 'description',
     message: 'description of project',
   },
-
+  {
+    type: 'input',
+    name: 'installation',
+    message: 'Installation instructions',
+  },  
+  {
+    type: 'input',
+    name: 'usage',
+    message: 'How to use',
+  },  
+  {
+    type: 'input',
+    name: 'credits',
+    message: 'description of project',
+  },  
+  {
+    type: 'list',
+    name: 'license',
+    message: 'License?',
+    choices: ['MIT','GNU','ISC','Mozilla','None'],
+  },  
+  {
+    type: 'input',
+    name: 'tests',
+    message: 'description of project',
+  },
+  {
+    type: 'input',
+    name: 'email',
+    message: 'description of project',
+  },
+  {
+    type: 'input',
+    name: 'github',
+    message: 'description of project',
+  },
 
 ];
 
-// TODO: Create a function to write README file
-function writeToFile(fileName, data) {}
-
-// TODO: Create a function to initialize app
 function init() {
   inquirer.prompt(questions).then(data => {
     fs.writeFileSync('readme.md', generateMarkdown(data))
   })
 }
 
-// Function call to initialize app
 init();
