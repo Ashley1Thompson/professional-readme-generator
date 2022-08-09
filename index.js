@@ -2,7 +2,7 @@
 const inquirer = require('inquirer');
 const fs = require('fs');
 const generateMarkdown = require ('./utils/generateMarkdown.js');
-// TODO: Create an array of questions for user input
+//An array of questions for user input
 const questions = [
   {
     type: 'input',
@@ -12,7 +12,7 @@ const questions = [
   {
     type: 'input',
     name: 'description',
-    message: 'description of project',
+    message: 'Description of project',
   },
   {
     type: 'input',
@@ -26,8 +26,13 @@ const questions = [
   },  
   {
     type: 'input',
+    name: 'features',
+    message: 'List the project features',
+  },
+  {
+    type: 'input',
     name: 'credits',
-    message: 'description of project',
+    message: 'List contributers',
   },  
   {
     type: 'list',
@@ -38,21 +43,22 @@ const questions = [
   {
     type: 'input',
     name: 'tests',
-    message: 'description of project',
+    message: 'List Testing for project',
   },
   {
     type: 'input',
     name: 'email',
-    message: 'description of project',
+    message: 'Enter your email',
   },
   {
     type: 'input',
     name: 'github',
-    message: 'description of project',
+    message: 'Enter your GitHub username (case sensitive)',
   },
 
 ];
 
+// A function to generate the Readme file when all inquirer prompts are answered
 function init() {
   inquirer.prompt(questions).then(data => {
     fs.writeFileSync('readme.md', generateMarkdown(data))

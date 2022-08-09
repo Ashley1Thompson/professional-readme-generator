@@ -48,11 +48,13 @@ ${data.description}
 ${data.installation}
 ## Usage
 ${data.usage}
+##Features
+${data.features}
 ## Credits
 ${data.credits}
 ## License
 ${data.license}
-## Tests
+## Testing
 ${data.tests}
 ## Questions
 For any questions please email me at ${data.email}
