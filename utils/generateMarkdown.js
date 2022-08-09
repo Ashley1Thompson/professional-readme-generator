@@ -48,17 +48,18 @@ ${data.description}
 ${data.installation}
 ## Usage
 ${data.usage}
-##Features
+## Features
 ${data.features}
 ## Credits
 ${data.credits}
 ## License
 ${data.license}
+${renderLicenseLink()}
 ## Testing
 ${data.tests}
 ## Questions
 For any questions please email me at ${data.email}
-or reach me on GitHub github.com/${data.github}
+or reach me on GitHub https://github.com/${data.github}
 `;
 }
 
